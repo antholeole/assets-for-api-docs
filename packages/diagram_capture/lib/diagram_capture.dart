@@ -371,7 +371,7 @@ class DiagramController {
   /// Advances the animation clock by the given duration.
   ///
   /// The [increment] must be greater than, or equal to, [Duration.zero].
-  void advanceTime([Duration increment = Duration.zero]) =>
+  Future<void> advanceTime([Duration increment = Duration.zero]) =>
       _binding.pump(duration: increment);
 
   /// Returns an [image.Image] representing the current diagram.
